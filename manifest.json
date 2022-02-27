@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "btbtt download helper",
+  "description": "btbtt download helper.",
+  "homepage_url": "https://github.com",
+  "version": "1.0",
+  "icons": {
+    "48": "icons/icon.png",
+    "96": "icons/icon@2x.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.btbtt11.com/*",
+                  "*://*.btbtt12.com/*",
+                  "*://*.btbtt13.com/*",
+                  "*://*.btbtt14.com/*",
+                  "*://*.btbtt15.com/*",
+                  "*://*.btbtt16.com/*",
+                  "*://*.btbtt17.com/*",
+                  "*://*.btbtt18.com/*",
+                  "*://*.btbtt19.com/*",
+                  "*://*.btbtt20.com/*"],
+      "js": ["./inject.js","./filesaver.js","./jszip.js", "./download.js"]
+    }
+  ],
+  "permissions": [],
+  "web_accessible_resources": ["img/*", "btbtt.css"]
+}
