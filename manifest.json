@@ -25,10 +25,5 @@
     }
   ],
   "permissions": [],
-  "web_accessible_resources": ["img/*", "btbtt.css"],
-  "browser_specific_settings": {
-    "gecko": {
-      "update_url": "https://github.com/op351/btbtt/updateMainFest.json"
-    }
-  }
+  "web_accessible_resources": ["img/*", "btbtt.css"]
 }
