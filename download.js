@@ -38,7 +38,7 @@ function generateDownloadButton() {
             let tr = linkP.parentNode.parentNode
             let newTd = tr.appendChild(document.createElement("td"))
             let downLoadButton = newTd.appendChild(document.createElement("img"))
-            downLoadButton.src = browser.extension.getURL("img/cloud-arrow-down-fill.svg")
+            downLoadButton.src = browser.runtime.getURL("img/cloud-arrow-down-fill.svg")
             downLoadButton.className = "mouse-on"
             downLoadButton.style = "width:1.5rem;height:100%"
             let loading = newTd.appendChild(document.createElement("div"))
@@ -99,7 +99,7 @@ function generateDownloadButton() {
             let pacDownLoad = td.appendChild(document.createElement("img"))
             // width="23rem"
             pacDownLoad.width = "23rem"
-            pacDownLoad.src = browser.extension.getURL("img/file-earmark-zip-fill.svg")
+            pacDownLoad.src = browser.runtime.getURL("img/file-earmark-zip-fill.svg")
             pacDownLoad.className = "mouse-on"
             pacDownLoad.style = "padding-left: 10px;width:1.5rem;height:100%"
             let loading = td.appendChild(document.createElement("div"))

@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "btbtt download helper",
   "description": "btbtt download helper.",
-  "homepage_url": "https://github.com",
+  "homepage_url": "https://github.com/op351/btbtt",
   "version": "1.0",
   "icons": {
     "48": "icons/icon.png",
@@ -25,5 +25,10 @@
     }
   ],
   "permissions": [],
-  "web_accessible_resources": ["img/*", "btbtt.css"]
+  "web_accessible_resources": ["img/*", "btbtt.css"],
+  "browser_specific_settings": {
+    "gecko": {
+      "update_url": "https://github.com/op351/btbtt/updateMainFest.json"
+    }
+  }
 }
