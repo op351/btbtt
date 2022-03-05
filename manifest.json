@@ -21,7 +21,7 @@
                   "*://*.btbtt18.com/*",
                   "*://*.btbtt19.com/*",
                   "*://*.btbtt20.com/*"],
-      "js": ["./inject.js","./filesaver.js","./jszip.js", "./download.js"]
+      "js": ["./inject.js","./filesaver.js","./jszip.js", "./download.js", "./mainPage.js"]
     }
   ],
   "permissions": [],
