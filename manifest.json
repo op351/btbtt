@@ -24,6 +24,8 @@
       "js": ["./inject.js","./filesaver.js","./jszip.js", "./download.js", "./mainPage.js"]
     }
   ],
-  "permissions": [],
+  "permissions": [
+    "<all_urls>"
+  ],
   "web_accessible_resources": ["img/*", "btbtt.css"]
 }
