@@ -3,7 +3,7 @@
   "name": "btbtt download helper",
   "description": "btbtt download helper.",
   "homepage_url": "https://github.com/op351/btbtt",
-  "version": "1.0",
+  "version": "1.1",
   "icons": {
     "48": "icons/icon.png",
     "96": "icons/icon@2x.png"
@@ -11,7 +11,9 @@
 
   "content_scripts": [
     {
-      "matches": ["*://*.btbtt11.com/*",
+      "matches": [
+                  "*://*.btbtt10.com/*",
+                  "*://*.btbtt11.com/*",
                   "*://*.btbtt12.com/*",
                   "*://*.btbtt13.com/*",
                   "*://*.btbtt14.com/*",
@@ -20,8 +22,12 @@
                   "*://*.btbtt17.com/*",
                   "*://*.btbtt18.com/*",
                   "*://*.btbtt19.com/*",
-                  "*://*.btbtt20.com/*"],
-      "js": ["./inject.js","./filesaver.js","./jszip.js", "./download.js"]
+                  "*://*.btbtt20.com/*",
+                  "*://*.bt529.com/*",
+                  "*://*.bt5268.com/*",
+                  "*://*.bt5288.com/*",
+                  "*://*.bt5298.com/*"],
+      "js": ["./inject.js","./filesaver.js","./jszip.js", "./download.js", "./upload.js"]
     }
   ],
   "permissions": [],

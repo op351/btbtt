@@ -32,7 +32,8 @@ async function getMultiBlobContent (realLinks, metaReal, mainName) {
 function generateDownloadButton() {
     let imgs = document.getElementsByTagName("img");
     for (let img of imgs) {
-        if (img.src === window.location.protocol + "//" + window.location.hostname +  "/view/image/filetype/torrent.gif") {
+        if (img.src === window.location.protocol + "//" + window.location.hostname +  "/view/image/filetype/torrent.gif"
+        || img.src === window.location.protocol + "//" + window.location.hostname +  "/view/image/filetype/zip.gif") {
             let linkP = img.parentNode
             linkP.href = linkP.href.replace("dialog", "download")
             let tr = linkP.parentNode.parentNode
@@ -48,7 +49,7 @@ function generateDownloadButton() {
                 downLoadButton.style = "display:none"
                 loading.style = ""
                 let downloadFileName = linkP.innerText
-                if (downloadFileName.search("torrent") === -1) {
+                if (img.src === window.location.protocol + "//" + window.location.hostname +  "/view/image/filetype/torrent.gif" && downloadFileName.search("torrent") === -1) {
                     downloadFileName = downloadFileName + ".torrent"
                 }
                 getBlobContent(linkP.href, downloadFileName).then(() => {
@@ -118,9 +119,9 @@ function generateDownloadButton() {
                         if (realFileLinkTag) {
                             let realLink = realFileLinkTag.href.replace("dialog", "download")
                             let realLinkName = realFileLinkTag.innerText
-                            if (realLinkName.search("torrent") === -1) {
-                                realLinkName = realLinkName + ".torrent"
-                            }
+                            // if (realLinkName.search("torrent") === -1) {
+                            //     realLinkName = realLinkName + ".torrent"
+                            // }
                             realLinks.push({
                                 realLink: realLink,
                                 realLinkName: realLinkName
